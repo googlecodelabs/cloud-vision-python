@@ -15,7 +15,7 @@ Learn how to use various features found in the Google Cloud Vision API with Pyth
 
 The [https://cloud.google.com/vision](Google Cloud Vision API) allows developers to easily integrate vision detection features within applications, including image labeling, facial features detection, landmark detection, optical character recognition (OCR), "safe search", or tagging of explicit content, detecting product or corporate logos, and several others.
 
-This repository consists of the sample apps that are part of the [https://codelabs.developers.google.com/codelabs/cloud-vision-api-python]("Using the Vision API with Python" hands-on codelab). That codelab teaches developers how to use some of the features described above with the Cloud Vision API using Python, namely label annotations, OCR/text extraction, landmark detection, and detecting facial features!
+This repository consists of the sample apps that are part of the [http://g.co/codelabs/vision-python]("Using the Vision API with Python" hands-on codelab). That codelab teaches developers how to use some of the features described above with the Cloud Vision API using Python, namely label annotations, OCR/text extraction, landmark detection, and detecting facial features!
 
 ## Support
 
