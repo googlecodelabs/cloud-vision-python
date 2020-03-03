@@ -1,6 +1,6 @@
 # Using the Vision API with Python
 
-Learn how to use various features found in the Google Cloud Vision API with Python.
+Learn how to use various functionality of the Google Cloud Vision API with Python by building 4 separate scripts that highlight a different feature available in the API.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ This repository consists of the sample scripts that correspond to the ["Using th
 
 ### Cost
 
-Use of the [Vision API is not free](https://cloud.google.com/vision/pricing), however certain Google Cloud Platform (GCP) products feature an ["Always Free" tier](https://cloud.google.com/free/docs/gcp-free-tier#always-free) for which you have to exceed in order to incur billing. For the purposes of the codelab, each call to the Vision API counts as a single "unit," and so long as you stay under that limit in aggregate (within each month), you should not incur any charges.
+Use of the [Vision API is not free](https://cloud.google.com/vision/pricing), however certain Google Cloud Platform (GCP) products feature an ["Always Free" tier](https://cloud.google.com/free/docs/gcp-free-tier#always-free) for which you have to exceed in order to incur billing. For the purposes of the codelab, each call to the Vision API counts against that free tier, and so long as you stay within its limits in aggregate (within each month), you should not incur any charges.
 
 ## Support
 
