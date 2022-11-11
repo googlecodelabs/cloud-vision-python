@@ -18,7 +18,7 @@ uri_base = 'gs://cloud-vision-codelab'
 pics = ('face_surprise.jpg', 'face_no_surprise.png')
 
 client = vision.ImageAnnotatorClient()
-image = vision.types.Image()
+image = vision.Image()
 
 for pic in pics:
     image.source.image_uri = f'{uri_base}/{pic}'
