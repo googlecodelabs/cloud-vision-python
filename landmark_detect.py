@@ -14,7 +14,7 @@
 
 from google.cloud import vision
 
-image_uri = 'gs://cloud-vision-codelab/eiffel_tower.jpg'
+image_uri = 'gs://cloud-samples-data/vision/eiffel_tower.jpg'
 
 client = vision.ImageAnnotatorClient()
 image = vision.Image()
