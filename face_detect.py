@@ -14,17 +14,18 @@
 
 from google.cloud import vision
 
-image_uri = 'gs://cloud-samples-data/vision/face/face_no_surprise.jpg'
+IMAGE_URI = 'gs://cloud-samples-data/vision/face/face_no_surprise.jpg'
+LIKELIHOOD = ('UNKNOWN', 'VERY_UNLIKELY', 'UNLIKELY', 'POSSIBLE',
+                       'LIKELY', 'VERY_LIKELY')
 
 client = vision.ImageAnnotatorClient()
 image = vision.Image()
-image.source.image_uri = image_uri
+image.source.image_uri = IMAGE_URI
 
 response = client.face_detection(image=image)
 
 print('=' * 79)
 for face in response.face_annotations:
-    likelihood = vision.enums.Likelihood(face.surprise_likelihood)
     vertices = [f'({v.x},{v.y})' for v in face.bounding_poly.vertices]
-    print(f'Face surprised: {likelihood.name}')
-    print(f'Face bounds: {",".join(vertices)}')
+    print('Face surprised:', LIKELIHOOD[face.surprise_likelihood])
+    print('Face bounds: {%s}' % ",".join(vertices))
