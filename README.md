@@ -4,16 +4,16 @@ Learn how to use various functionality of the Google Cloud Vision API with Pytho
 
 ## Prerequisites
 
-- A Google account (G Suite accounts may require administrator approval)
-- A Google Cloud Platform project
+- A Gmail/Google account (Workspace accounts may require administrator approval)
+- A Google Cloud (Platform) project
 - An active GCP billing account
 - Basic Python skills
 
-NOTE: Python >=3.6 is required for this codelab. Python 2 is no longer supported but the code should work provided you make the appropriate backports (e.g., `print()` function calls, f-strings, etc.) and use the Python 2 Vision API client library—see [its repo](https://github.com/googleapis/python-vision) for the last known 2.x version.
+NOTE: Either Python 2.6+ or 3.6+ is required for this codelab. The Vision API client library code is open source and can be found in [its repo](https://github.com/googleapis/python-vision). The final version that works for Python 2 is v1.0.0.
 
 ## Description
 
-The [Google Cloud Vision API](https://cloud.google.com/vision) allows developers to easily integrate vision detection features within applications, including image labeling, facial features detection, landmark detection, optical character recognition (OCR), "safe search", or tagging of explicit content, detecting product or corporate logos, and several others. These are sample scripts that demonstrate usage of the API for the Python language. It is possible to backport the code to 2.x provided you have the requisite libraries, however we recommend migrating to 3.x as soon as possible.
+The [Google Cloud Vision API](https://cloud.google.com/vision) allows developers to easily integrate vision detection features within applications, including image labeling, facial features detection, landmark detection, optical character recognition (OCR), "safe search", or tagging of explicit content, detecting product or corporate logos, and several others. These are sample scripts that demonstrate usage of the API for the Python language. The code in this repo is both Python 2 & 3 compatible. It is available in Python 2 to help developers migrate to Python 3, and we recommend migrating to 3.x as soon as possible.
 
 ### Codelab
 
