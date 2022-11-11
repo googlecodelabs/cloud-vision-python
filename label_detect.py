@@ -12,17 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import print_function
 from google.cloud import vision
 
 image_uri = 'gs://cloud-samples-data/vision/using_curl/shanghai.jpeg'
 
 client = vision.ImageAnnotatorClient()
-image = vision.Image()
+image = vision.Image() if hasattr(vision, 'Image') else vision.types.Image()
 image.source.image_uri = image_uri
 
 response = client.label_detection(image=image)
 
 print('Labels (and confidence score):')
-print('=' * 79)
+print('=' * 30)
 for label in response.label_annotations:
-    print(f'{label.description} ({label.score*100.:.2f}%)')
+    print(label.description, '(%.2f%%)' % (label.score*100.))

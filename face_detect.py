@@ -12,20 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import print_function
 from google.cloud import vision
 
-IMAGE_URI = 'gs://cloud-samples-data/vision/face/face_no_surprise.jpg'
-LIKELIHOOD = ('UNKNOWN', 'VERY_UNLIKELY', 'UNLIKELY', 'POSSIBLE',
+image_uri = 'gs://cloud-samples-data/vision/face/face_no_surprise.jpg'
+likelihood = ('UNKNOWN', 'VERY_UNLIKELY', 'UNLIKELY', 'POSSIBLE',
                        'LIKELY', 'VERY_LIKELY')
 
 client = vision.ImageAnnotatorClient()
-image = vision.Image()
-image.source.image_uri = IMAGE_URI
+image = vision.Image() if hasattr(vision, 'Image') else vision.types.Image()
+image.source.image_uri = image_uri
 
 response = client.face_detection(image=image)
 
-print('=' * 79)
+print('=' * 30)
 for face in response.face_annotations:
-    vertices = [f'({v.x},{v.y})' for v in face.bounding_poly.vertices]
-    print('Face surprised:', LIKELIHOOD[face.surprise_likelihood])
-    print('Face bounds: {%s}' % ",".join(vertices))
+    vertices = ['(%s,%s)' % (v.x, v.y) for v in face.bounding_poly.vertices]
+    print('Face surprised:', likelihood[face.surprise_likelihood])
+    print('Face bounds:', ','.join(vertices))
