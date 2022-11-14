@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from __future__ import print_function
+# Py2+3 from __future__ import print_function
 from google.cloud import vision
 
 image_uri = 'gs://cloud-samples-data/vision/text/screen.jpg'
 
 client = vision.ImageAnnotatorClient()
-image = vision.Image() if hasattr(vision, 'Image') else vision.types.Image()
+image = vision.Image() # Py2+3 if hasattr(vision, 'Image') else vision.types.Image()
 image.source.image_uri = image_uri
 
 response = client.text_detection(image=image)
